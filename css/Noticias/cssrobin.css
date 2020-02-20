@@ -1,0 +1,15 @@
+body
+{
+      padding: 16px;
+      background-color: rgb(202, 43, 43);
+      color: rgb(109, 206, 19);
+}
+img {
+      display: block;
+      max-width: 40%;
+      width: 20%;
+}
+nav {
+      width: 60%;
+      max-width: 60%;
+}

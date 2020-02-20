@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="../css/Noticias/cssform.css">
+    <!--FALTA LO DEL POST Y 3 CONTROLES INTERACTIVOS MÁS-->
+</head>
+
+
+<body>
+    <a href="../index.html#inicio"><img src="../images/index/menu.1.png" alt="menu" width="100"></a>
+    <header>Cuestionario</header>
+    <main>
+        <fieldset>
+            <form method="post" action="mailto:manuhidalgonieto@gmail.com" method="POST" target="_self"
+                enctype="multipart/form-data">
+                <legend>Datos básicos</legend>
+                <label for="nombre">Nombre: <input type="text" name="nombre" size="30" autofocus></label>
+                <label for="Descripción">Descripción: </label><textarea name="Descripción" rows="8" cols="50" min="10"
+                    max="250" autofocus></textarea>
+                   <br> Seleccione una o más opciones de tus héroes favoritos de la batfamilia:<br />
+                    <select name="selector de héroe" size="5" multiple>
+                        <option value="1">Batman</option>
+                        <option value="2">Robin</option>
+                        <option value="3">Nightwing</option>
+                        <option value="4">Batgirl</option>
+                        <option value="5">Batwoman</option>
+                    </select>
+                <label for="boton"> Foto de perfil </label><input type="button" value="Seleccionar archivo" name="boton"
+                    id="boton" autofocus>
+                Ningun archivo seleccionado
+                
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Datos de cómics</legend>
+
+            <p>Elige tus súperheroe favorito:</p>
+
+            <input type="radio" name="superheroefavorito" id="Batman" value="Batman" autofocus>
+            <label for="Batman">Batman</label> <br>
+
+            <input type="radio" name="superheroefavorito" id="Superman" value="Superman" autofocus>
+            <label for="Superman">Superman</label> <br>
+
+            <input type="radio" name="superheroefavorito" id="Green Arrow" value="Green Arrow" autofocus>
+            <label for="Green Arrow">Green Arrow</label><br>
+
+            <input type="radio" name="superheroefavorito" id="Hawkman" value="Hawkman" autofocus>
+            <label for="Hawkman">Hawkman</label> <br>
+
+            <input type="radio" name="superheroefavorito" id="Nightwing" value="Nightwing" autofocus>
+            <label for="Hawkman">Nightwing</label> <br>
+
+            <input type="radio" name="superheroefavorito" id="Green Lantern" value="Green Lantern" autofocus>
+            <label for="Green Lantern">Green Lantern</label> <br>
+
+            <input type="radio" name="superheroefavorito" id="Flash" value="Flash" autofocus>
+            <label for="Flash">Flash</label> <br>
+        </fieldset>
+
+
+     <button type="submit" value="enviar" name="enviar" id="enviar" autofocus><label  for="enviar">Enviar los datos</label></button>
+        <button type="reset" value="reset" name="reset" id="reset" autofocus><label  for="reset">Restablecer los datos</label></button>
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+
+</html>

@@ -1,0 +1,1 @@
+// alert("Gracias por visitar mi página web de cómics")   

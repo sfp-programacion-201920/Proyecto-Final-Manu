@@ -1,0 +1,15 @@
+body
+{
+      padding: 16px;
+      background-color: rgb(0, 36, 102);   /*aquí he indicado que el fondo de la página web sea azul */
+      color: rgb(255, 238, 0);
+}
+img {
+      display: block;
+      max-width: 40%;
+      width: 20%;
+    }
+    nav {
+      width: 30%;
+      max-width: 60%;
+}
