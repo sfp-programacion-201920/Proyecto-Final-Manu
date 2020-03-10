@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Formulario</title>
     <link rel="stylesheet" href="../css/Noticias/cssform.css">
+    <script src="../JavaScript.js"></script>
     <!--FALTA LO DEL POST Y 3 CONTROLES INTERACTIVOS MÁS-->
 </head>
 
@@ -15,59 +16,71 @@
     <a href="../index.html#inicio"><img src="../images/index/menu.1.png" alt="menu" width="100"></a>
     <header>Cuestionario</header>
     <main>
-        <fieldset>
-            <form method="post" action="mailto:manuhidalgonieto@gmail.com" method="POST" target="_self"
-                enctype="multipart/form-data">
-                <legend>Datos básicos</legend>
-                <label for="nombre">Nombre: <input type="text" name="nombre" size="30" autofocus></label>
-                <label for="Descripción">Descripción: </label><textarea name="Descripción" rows="8" cols="50" min="10"
-                    max="250" autofocus></textarea>
-                   <br> Seleccione una o más opciones de tus héroes favoritos de la batfamilia:<br />
-                    <select name="selector de héroe" size="5" multiple>
-                        <option value="1">Batman</option>
-                        <option value="2">Robin</option>
-                        <option value="3">Nightwing</option>
-                        <option value="4">Batgirl</option>
-                        <option value="5">Batwoman</option>
+        <section>
+            <fieldset>
+                <legend>Datos</legend>
+                <form name="Formulario de registro" id="form" action="mailto:manuhidalgonieto@gmail.com" method="POST"
+                    target="_self" enctype="multipart/form-data">
+                    <label>Introduce tu nombre: </label><input type="text" name="Nombre" size="15" autocomplete="name"
+                        autofocus  placeholder="Nombre"><br><br>
+                    <label>Introduce tus apellidos: </label><input type="text" name="Apellidos" size="50"
+                        autocomplete="name"  placeholder="Apellidos"><br><br>
+                    <label>¿Quieres que te llame de alguna otra manera?</label> <input type="text" name="Apodo"
+                        size="10" autocomplete="nickname"><br><br>
+                    <label>Escribe una contraseña: </label><input type="password" name="Contraseña" minlength="6"
+                        maxlength="18" id="contraseña" onblur="email()" ><br><br>
+                    <label>Introduce tu edad: </label><input type="number" name="Edad" step="1" 
+                        placeholder="18" min="18"><br><br>
+                    <label>Número de telefono: </label><input type="tel" name="Telefono" id="telefono" onblur="telefono()" value="+34"><br><br>
+
+                    <label>Escribe tu Correo </label><input type="email" id="email" name="email" size="50"
+                        autocomplete="email" placeholder="@gmail.com, @outlook.es" onblur="email()"><br><br>
+
+                    <label>Introduce tu fecha de nacimiento: </label><input type="date" name="Fecha" ><br><br>
+                    <label>Introduce tu uso horario para ajustar nuestros horarios al tuyo: </label><input
+                        type="datetime-local" name="Hora" ><br><br>
+                    <label>Sube una foto de perfil: </label><input type="file" name="Icono" accept=".jpg, .png"><br><br>
+                    <label id="Pilotos">Seleccione su superheroe favorito</label><br>
+                    <select name="Pilotos">
+                        <option value="Superman">Superman</option>
+                        <option value="Batman">Batman</option>
+                        <option value="El hombre marciano">El hombre marciano</option>
+                        <option value="Flash">Flash</option>
+                        <option value="Hawkman">Hawkman</option>
+                        <option value="Robin">Robin</option>
+                        <option value="Arrow">Arrow</option>
                     </select>
-                <label for="boton"> Foto de perfil </label><input type="button" value="Seleccionar archivo" name="boton"
-                    id="boton" autofocus>
-                Ningun archivo seleccionado
-                
-
-        </fieldset>
-
-        <fieldset>
-            <legend>Datos de cómics</legend>
-
-            <p>Elige tus súperheroe favorito:</p>
-
-            <input type="radio" name="superheroefavorito" id="Batman" value="Batman" autofocus>
-            <label for="Batman">Batman</label> <br>
-
-            <input type="radio" name="superheroefavorito" id="Superman" value="Superman" autofocus>
-            <label for="Superman">Superman</label> <br>
-
-            <input type="radio" name="superheroefavorito" id="Green Arrow" value="Green Arrow" autofocus>
-            <label for="Green Arrow">Green Arrow</label><br>
-
-            <input type="radio" name="superheroefavorito" id="Hawkman" value="Hawkman" autofocus>
-            <label for="Hawkman">Hawkman</label> <br>
-
-            <input type="radio" name="superheroefavorito" id="Nightwing" value="Nightwing" autofocus>
-            <label for="Hawkman">Nightwing</label> <br>
-
-            <input type="radio" name="superheroefavorito" id="Green Lantern" value="Green Lantern" autofocus>
-            <label for="Green Lantern">Green Lantern</label> <br>
-
-            <input type="radio" name="superheroefavorito" id="Flash" value="Flash" autofocus>
-            <label for="Flash">Flash</label> <br>
-        </fieldset>
+                    <br><br>
+                    <label>Selecciona los personajes que quieres recibir información de sus cómics:</label><br>
+                    <input type="checkbox" name="Batman"><label id="Batman">Batman</label><br>
+                    <input type="checkbox" name="Superman"><label id="Superman">Superman</label><br>
+                    <input type="checkbox" name="Flash"><label id="Flash">Flash</label><br>
+                    <input type="checkbox" name="Robin"><label id="Robin">Robin</label><br>
+                    <input type="checkbox" name="Arrow"><label id="Arrow">Arrow</label><br>
+                    <br><br>
+                    <label>Selecciona tus comics favoritos:</label><br>
+                    <input type="radio" name="La broma asesina"><label id="La broma asesina">La broma
+                        asesina</label><br>
+                    <input type="radio" name="El caballero oscuro vuelve"><label id="El caballero oscuro vuelve">El
+                        caballero oscuro vuelve</label><br>
+                    <input type="radio" name="El hombre del mañana"><label id="El hombre del mañana">El hombre del
+                        mañana</label><br>
+                    <input type="radio" name="Una muerte en la familia"><label id="Una muerte en la familia">Una muerte
+                        en la familia</label><br>
+                    <br><br>
+                    <label id="Satisfaccion">Nivel de satisfacción con Rebirth</label><br>
+                    <input type="range" name="Satisfaccion" min="0" max="10" step="1"><br><br>
+                    <label id="Categorias">¿Que superheroínas te gustan?</label><br><textarea name="Categorias"
+                        rows="10" placeholder="Supergirl, Catwoman, Zatanna, etc." cols="55"></textarea><br><br>
+                </form>
+            </fieldset>
 
 
-     <button type="submit" value="enviar" name="enviar" id="enviar" autofocus><label  for="enviar">Enviar los datos</label></button>
-        <button type="reset" value="reset" name="reset" id="reset" autofocus><label  for="reset">Restablecer los datos</label></button>
-        </form>
+            <button type="submit" value="enviar" name="enviar" id="enviar" autofocus><label for="enviar">Enviar los
+                    datos</label></button>
+            <button type="reset" value="reset" name="reset" id="reset" autofocus><label for="reset">Restablecer los
+                    datos</label></button>
+            </form>
     </main>
     <footer>
 
